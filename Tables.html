@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title>Exercícios: Tabelas</title>
+		<link rel="stylesheet" type="text/css" href="Styles.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="header" onclick="location.href='Index.html';">
+				<h1>Tabelas</h1>
+				<div id="returnButton" class="button"><p>Retornar ao menu</p></div>
+			</div>
+			<div id="content">
+				<div id="list" class="content">
+					<div style = 'display: flex; flex-direction: column;'>
+						<h3>Tabela simples</h3>
+						<table>
+							<tr>
+								<th>Pokemon</th>
+								<th>Tipo primário</th>
+								<th>Tipo secundário</th>
+							</tr>
+							<tr>
+								<td>Butterfree</td>
+								<td>Inseto</td>
+								<td>Voador</td>
+							</tr>
+							<tr>
+								<td>Vaporeon</td>
+								<td>Aquático</td>
+							</tr>
+							<tr>
+								<td>Sylveon</td>
+								<td>Fada</td>
+							</tr>
+						</table>
+					</div>
+					<div style = 'display: flex; flex-direction: column;'>
+						<h3>Tabela com alinhamento</h3>
+						<table>
+							<tr>
+								<th align="left">Pokemon</th>
+								<th align="center">Tipo primário</th>
+								<th align="right">Tipo secundário</th>
+							</tr>
+							<tr>
+								<td>Butterfree</td>
+								<td align="center">Inseto</td>
+								<td align="right">Voador</td>
+							</tr>
+							<tr>
+								<td>Vaporeon</td>
+								<td align="center">Aquático</td>
+							</tr>
+							<tr>
+								<td>Sylveon</td>
+								<td align="center">Fada</td>
+							</tr>
+						</table>
+					</div>
+					<div style = 'display: flex; flex-direction: column;'>
+						<h3>Tabela com vAlign</h3>
+						<table>
+							<tr>
+								<th >Pokemon</th>
+								<th>Tipo primário</th>
+								<th>Tipo secundário</th>
+							</tr>
+							<tr>
+								<td valign="top">Butterfree</td>
+								<td valign="top">Inseto</td>
+								<td valign="top">Voador</td>
+							</tr>
+							<tr>
+								<td valign="middle">Vaporeon</td>
+								<td valign="middle">Aquático</td>
+							</tr>
+							<tr>
+								<td valign="bottom">Sylveon</td>
+								<td valign="bottom">Fada</td>
+							</tr>
+						</table>
+					</div>
+					<div style = 'display: flex; flex-direction: column;'>
+						<h3>Tabela com colspan</h3>
+						<table>
+							<tr>
+								<th >Pokemon</th>
+								<th>Tipo primário</th>
+								<th>Tipo secundário</th>
+							</tr>
+							<tr>
+								<td>Butterfree</td>
+								<td>Inseto</td>
+								<td>Voador</td>
+							</tr>
+							<tr>
+								<td>Vaporeon</td>
+								<td colspan="2">Aquático</td>
+							</tr>
+							<tr>
+								<td colspan="2">Sylveon</td>
+								<td >Fada</td>
+							</tr>
+						</table>
+					</div>
+					<div style = 'display: flex; flex-direction: column;'>
+						<h3>Tabela com rowspan</h3>
+						<table>
+							<tr>
+								<th >Pokemon</th>
+								<th>Tipo primário</th>
+								<th>Tipo secundário</th>
+							</tr>
+							<tr>
+								<td>Butterfree</td>
+								<td>Inseto</td>
+								<td rowspan="3">Voador</td>
+							</tr>
+							<tr>
+								<td>Vaporeon</td>
+								<td >Aquático</td>
+							</tr>
+							<tr>
+								<td >Sylveon</td>
+								<td >Fada</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
