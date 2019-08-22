@@ -1,3 +1,7 @@
+* {
+ font-family: Calibri;
+}
+
 body {
 	display: flex;
 	justify-content: center;
@@ -8,11 +12,9 @@ body {
 
 p {
 	margin: 0px;
-	font-family: Calibri;
 }
 
 h3 {
-	font-family: Calibri;
 	color: #1a1a1a;
 }
 
@@ -32,7 +34,6 @@ h3 {
 	box-shadow: 0px 10px #f2f2f2;
 	background-color: #003d99;
 	text-align: center;
-	font-family: Calibri;
 	color: white;
 }
 
@@ -76,7 +77,6 @@ h3 {
 	width: 100%;
 	height: 75px;
 	margin: 10px 0px;
-	font-family: Calibri;
 	font-size: 30px;
 	display: flex;
 	justify-content: center;
@@ -93,7 +93,7 @@ h3 {
 	transform: scale(1.1);
 }
 
-.button > p {
+.button {
 	height: auto;
 	margin: auto;
 	color: white;
@@ -111,4 +111,30 @@ td {
 	height: 30px;
 	padding: 2px;
 	border: 0.75px solid #66a3ff;
+}
+
+
+/* Formulários */
+
+#form > form > fieldset {
+	border-color: #5c91db;
+	margin: 10px 0px;
+}
+
+#form > form > fieldset > div > .input {
+	border: 1px solid #becfe6;
+	border-radius: 5px;
+	line-height: 24px;
+	padding: 5px;
+	width: 100%;
+	font-size: 16px;
+}
+
+.flexRow {
+	display: flex;
+}
+
+.flexColumn {
+	display: flex;
+	flex-direction: column;
 }
