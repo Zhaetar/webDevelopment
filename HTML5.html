@@ -6,11 +6,11 @@
     </head>
     <body>
         <div id="container">
-            <div id="header" onclick="location.href='Index.html';">
+            <div id="header">
                 <h1>HTML 5</h1>
-                <div id="returnButton" class="button"><p>Retornar ao menu</p></div>
             </div>
-            <div id="indexContent">
+            <div id="returnButton" class="button" onclick="location.href='Index.html';"></div>
+            <div id="menuContent">
                 <div id="list" class="content">
                     <div style = 'display: flex; flex-direction: column;'>
                         <h3>Exemplos de utilização do Canvas</h3>
@@ -35,7 +35,6 @@
         </div>
         <script>
             // Source: https://www.w3schools.com/graphics/canvas_clock.asp
-
             var canvas = document.getElementById("canvas");
             var ctx = canvas.getContext("2d");
             var radius = canvas.height / 2;
