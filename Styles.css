@@ -22,7 +22,7 @@ h3 {
 	color: #1a1a1a;
 }
 
-#container {
+#indexContainer {
 	/*background-color: white;*/
 	width: 80%;
 	height: 80%;
@@ -33,9 +33,25 @@ h3 {
 /*;	overflow: hidden;*/
 }
 
+#container {
+	background-color: white;
+	width: 80%;
+	height: 100% - 20px;
+	border-left: 2px solid #2C5C9E;
+	border-right: 2px solid #2C5C9E;
+	/* margin: auto; */
+	overflow: auto;
+	padding: 10px;
+}
+
 #header {
 	color: white;
 	margin-bottom: 8px;
+}
+
+#container > #header {
+	color: #141E30;
+	margin-bottom: 15px;
 }
 
 #header > h1 {
@@ -47,6 +63,7 @@ h3 {
 }
 
 .content {
+	width: 90%;
 	padding: 10px;
 	display: flex;
 	flex-wrap: wrap;
@@ -71,6 +88,15 @@ h3 {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
+#menuContent {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	transition: all 1s;
+}
+
 .button {
 	border-bottom: 3px solid #002966;
 	height: 100px;
@@ -87,7 +113,8 @@ h3 {
   	box-shadow: 3px 3px 0 rgba(0,0,0,.15);
 }
 
-.button > h1 {
+.button > h1 ,
+.button {
 	margin: 0px 0px 10px 0px;
 	color: white;
 	font-size: 25px;
@@ -98,16 +125,12 @@ h3 {
 	font-size: 12px;
 }
 
-.button2 {
-	/*width: 250px;*/
-	/*height: 405px;*/
+.button:hover {
+	background-color: #22467F;
 }
 
-.button:hover {
-	/*border-left: 10px solid #002966;*/
-	/*margin-right: -10px;*/
-	background-color: #22467F;
-	/*transform: scale(1.1);*/
+.small {
+	height: 50px;
 }
 
 #returnButton {
