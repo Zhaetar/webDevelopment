@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin: 0px;
+	background: #141E30;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+p {
+	margin: 0px;
+}
+
+h3 {
+	color: #1a1a1a;
+}
+
+#indexContainer {
+	/*background-color: white;*/
+	width: 80%;
+	height: 80%;
+	/*border-radius: 5px;*/
+  	border-radius: 5px 20px 5px;
+	/*border: 2px solid #2C5C9E;*/
+	margin: auto;
+/*;	overflow: hidden;*/
+}
+
+#container {
+	background-color: white;
+	width: 80%;
+	height: 100% - 20px;
+	border-left: 2px solid #2C5C9E;
+	border-right: 2px solid #2C5C9E;
+	/* margin: auto; */
+	overflow: auto;
+	padding: 10px;
+}
+
+#header {
+	color: white;
+	margin-bottom: 8px;
+}
+
+#container > #header {
+	color: #141E30;
+	margin-bottom: 15px;
+}
+
+#header > h1 {
+	margin: 0px;
+}
+
+#content {
+	padding: 0px 10px;
+}
+
+.content {
+	width: 90%;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.content > div {
+	padding: 2px;
+	margin: 3px;
+}
+
+.content > div > h3 {
+	border-bottom: 1px solid #b3b3b3;
+}
+
+/*Conteudo*/
+
+#indexContent {
+	display: grid;
+	grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+#menuContent {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+	transition: all 1s;
+}
+
+.button {
+	border-bottom: 3px solid #002966;
+	height: auto;
+	display: flex;
+	padding: 10px;
+	background-color: #2C5C9E;
+	border-radius: 7px;
+	transition: all .2s ease-in-out;
+	overflow: hidden;
+	text-overflow: break-all;
+	cursor: pointer;
+	flex-direction: column;
+  	box-shadow: 3px 3px 0 rgba(0,0,0,.15);
+}
+
+.button,
+.button > h1  {
+	margin: 0px 0px 10px 0px;
+	color: white;
+	font-size: 25px;
+}
+
+.button > p {
+	color: white;
+	font-size: 12px;
+}
+
+.button:hover {
+	background-color: #22467F;
+}
+
+.small,
+.small > h1 {
+  font-size: 20px;
+}
+
+#returnButton {
+	background-image: url("https://cdn2.iconfinder.com/data/icons/50-material-design-round-corner-style/44/Replay_Reverse-512.png");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0px;
+	width: 25px;
+	height: 25px;
+	font-size: 18px;
+	margin: 0px 0px 0px 0px;
+}
+
+td {
+	height: 30px;
+	padding: 2px;
+	border: 0.75px solid #66a3ff;
+}
+
+
+/* Formulários */
+
+#form > form > fieldset {
+	border-color: #5c91db;
+	margin: 10px 0px;
+}
+
+#form > form > fieldset > div > .input {
+	border: 1px solid #becfe6;
+	border-radius: 5px;
+	line-height: 24px;
+	padding: 5px;
+	width: 100%;
+	font-size: 16px;
+}
+
+.flexRow {
+	display: flex;
+}
+
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+}
