@@ -1,0 +1,55 @@
+<html>
+
+<head>
+	<title>Exercícios: Aula 14/08</title>
+	<link rel="stylesheet" type="text/css" href="Styles.css">
+	<meta charset="UTF-8">
+	<script src="Javascript.js">
+
+	</script>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Javascript</h1>
+		</div>
+		<div id="returnButton" class="button" onclick="location.href='index.html';"></div>
+		<div id="menuContent">
+			<div>
+				<form class="flexColumn" style="margin-bottom: 10px; flex-wrap: wrap">
+					<fieldset>
+						<legend>Nome</legend>
+						<input class="input" type="input" id="name-input" required></input>
+					</fieldset>
+					<fieldset>
+						<legend>Endereço</legend>
+						<input class="input" type="input" id="address-input"></input>
+					</fieldset>
+					<fieldset>
+						<legend>E-mail</legend>
+						<input class="input" type="email" id="email-input" required></input>
+					</fieldset>
+					<fieldset>
+						<legend>Idade</legend>
+						<input class="input" type="number" id="age-input"></input>
+					</fieldset>
+			<div class="flexRow" style="margin-top: 10px;"><input type="checkbox" id="casetoggle" onchange="toggleCase()">Campos em caixa alta</input></div>
+      <div class="flexColumn" style="margin-top: 10px;">
+        <div class="flexRow" style="margin-bottom: 10px;">
+        <input class="button small" style="margin-bottom: 10px;" type="reset">
+        <input class="button small" type="submit">
+        </div>
+        <div class="flexRow" style="margin-bottom: 10px;">
+        <input class="button small" type="button" onclick="alertName()" value ="Exibir informações do dia">
+        <input class="button small" type="button" onclick="getRandomAnimalName()" value ="Exibir um nome de um animal aleatório">
+        </div>
+        </div>
+      </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

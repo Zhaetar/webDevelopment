@@ -99,7 +99,7 @@ h3 {
 
 .button {
 	border-bottom: 3px solid #002966;
-	height: 100px;
+	height: auto;
 	display: flex;
 	padding: 10px;
 	background-color: #2C5C9E;
@@ -108,13 +108,12 @@ h3 {
 	overflow: hidden;
 	text-overflow: break-all;
 	cursor: pointer;
-	display: flex;
 	flex-direction: column;
   	box-shadow: 3px 3px 0 rgba(0,0,0,.15);
 }
 
-.button > h1 ,
-.button {
+.button,
+.button > h1  {
 	margin: 0px 0px 10px 0px;
 	color: white;
 	font-size: 25px;
@@ -129,8 +128,9 @@ h3 {
 	background-color: #22467F;
 }
 
-.small {
-	height: 50px;
+.small,
+.small > h1 {
+  font-size: 20px;
 }
 
 #returnButton {
