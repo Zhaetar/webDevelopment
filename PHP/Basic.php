@@ -1,109 +1,93 @@
-	<html>
+<?php
+  function getFormattedDate() {
+    return "Hoje é ".getCurrentDate()." e agora são ".getCurrentTime()."h!";
+  }
+  
+  function getCurrentDate() {
+    return date("d/m/y");
+  }
+
+  function getCurrentTime() {
+    return date("H:i");
+  }
+
+  function printALotOfAnimals() {
+    $animals = ['Aardvark', 'Abelha', 'Águia', 'Alce'];
+    foreach ($animals as $animal) {
+      $animalupper = strtoupper($animal);
+      echo "<p>{$animalupper}</p>";
+    }
+  }
+
+  function addReadCounter() {
+    $fileName = 'reads.txt';
+
+    $readCount = getReadCount($fileName);
+    writeOnFile($fileName, $readCount);
+    return $readCount;
+  }
+
+  function getReadCount($fileName) {
+    $file = fopen($fileName, 'r');
+    if ($file == false) {
+      createNewFile($fileName);
+      $readCount = 1;
+    } else {
+      $readCount = fgets($file) + 1;
+      fclose($file);
+    }
+
+    return $readCount;
+  }
+
+  function writeOnFile($fileName, $text) {
+    $file = fopen($fileName, 'w');
+    fwrite($file, $text);
+    fclose($file);
+  }
+
+  function createNewFile($fileName) {
+    $file = fopen($fileName,'w');
+    fclose($file);
+  }
+
+  function writeOnSession($value) {
+    $_COOKIE['value'] = $value;
+  }
+
+  function readSession() {
+    writeOnSession("Valor salvo nos cookies");
+    return $_COOKIE['value'];
+  }
+?>
+<html>
 	<head>
-		<title>Exercícios: Formularios</title>
+		<title>Exercícios: Aula 25/09</title>
 		<link rel="stylesheet" type="text/css" href="Styles.css">
 		<meta charset="UTF-8">
 	</head>
 	<body>
 		<div id="container">
-			<div id="header">
-				<h1>Formularios</h1>
+			<div id="header" >
+				<h1>Básico</h1>
 			</div>
-			<div id="returnButton" class="button" onclick="location.href='index.html';"></div>
-			<div id="content">
-				<div id="form" class="content">
-					<form class="flexColumn">
-						<fieldset>
-							<legend>Seu nome</legend>
-							<div style="display: flex">
-								<input class="input" type="input"></input>
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend>Um segredo</legend>
-							<div style="display: flex">
-								<input class="input" type="password"></input>
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend>Animais que você gosta</legend>
-							<div class="flexColumn">
-								<div class="flexRow">
-									<input id="animal1" type="checkbox"></input>
-									<legend for="animal1">Raposa</legend>
-								</div>
-								<div class="flexRow">
-									<input type="checkbox"></input>
-									<legend>Camundongo</legend>
-								</div>
-								<div class="flexRow">
-									<input type="checkbox"></input>
-									<legend>Pinguim</legend>
-								</div>
-								<div class="flexRow">
-									<input type="checkbox"></input>
-									<legend>Lontra</legend>
-								</div>
-								<div class="flexRow">
-									<input type="checkbox"></input>
-									<legend>Esquilo</legend>
-								</div>
-								<div class="flexRow">
-									<input type="checkbox"></input>
-									<legend>Peixe-boi</legend>
-								</div>
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend>Se você pudesse ser um animal, qual seria?</legend>
-							<div class="flexColumn">
-								<div class="flexRow">
-									<input type="radio"></input>
-									<legend>Águia</legend>
-								</div>
-								<div class="flexRow">
-									<input type="radio"></input>
-									<legend>Chinchilla</legend>
-								</div>
-								<div class="flexRow">
-									<input type="radio"></input>
-									<legend>Orca</legend>
-								</div>
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend>Descreva o que afetou sua escolha na pergunta acima</legend>
-							<div class="flexRow">
-								<textarea class="input" style="width: 100%; height: 75px"></textarea>
-							</div>
-						</fieldset>
-						<fieldset>
-							<legend>A raposa pertence a qual familia biológica?</legend>
-							<select style="margin: 10px 0px;">
-							  <option value="ailuridae">Ailuridae</option>
-							  <option value="amphicyonidae">Amphicyonidae</option>
-							  <option value="canidae">Canidae</option>
-							  <option value="phocidae">Phocidae</option>
-							</select>
-						</fieldset>
-						<fieldset>
-							<legend>Quais dos seguintes animais brasileiros estão em extinção?</legend>
-							<select multiple style="margin: 10px 0px;">
-							  <option value="ararajuba">Ararajuba</option>
-							  <option value="arara">Arara-azul</option>
-							  <option value="ariranha">Ariranha</option>
-							  <option value="baleia">Baleia-franca</option>
-							  <option value="gato">Gato-maracajá</option>
-							  <option value="cervo">Cervo-do-pantanal</option>
-							  <option value="macaco">Macaco-aranha</option>
-							  <option value="mico">Mico-leão-dourado</option>
-							  <option value="onca">Onça-pintada</option>
-							  <option value="tartaruga">Tartaruga-oliva</option>
-							</select>
-						</fieldset>
-						<input class="button small" style="margin-bottom: 10px;" type="reset">
-						<input class="button small" type="submit">
-					</form>
+			<div id="returnButton" class="button" onclick="location.href='index.php';"></div>
+			<div id="menuContent">
+				<div style="padding: 30px;">
+          <h2>Data de hoje</h2>
+					<p><?=getFormattedDate()?></p>
+				</div>
+				<div style="padding: 30px;">
+          <h2>Nome de animais em maiusculo</h2>
+					<p><?=printALotOfAnimals()?></p>
+				</div>
+				<div style="padding: 30px;">
+          <h2>Número de acessos</h2>
+					<p><?=addReadCounter()?></p>
+				</div>
+				<div style="padding: 30px;">
+          <h2>Valor salvo nos COOKIES</h2>
+					<p><?=readSession()?></p>
 				</div>
 			</div>
 		</div>
