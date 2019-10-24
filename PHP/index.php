@@ -16,6 +16,10 @@
 				<h1>BÁSICO</h1>
 				<p>Exercício 8</p>
 			</div>
+			<div class="button" onclick="location.href='Form.php';">
+				<h1>FORMULÁRIO</h1>
+				<p>Exercício 9</p>
+			</div>
 		</div>
 	</div>
 </body>

@@ -9,18 +9,24 @@
 			<div id="header">
 				<h1>Formularios</h1>
 			</div>
-			<div id="returnButton" class="button" onclick="location.href='index.html';"></div>
+			<div id="returnButton" class="button" onclick="location.href='index.php';"></div>
 			<div id="content">
 				<div id="form" class="content">
-					<form class="flexColumn">
+					<form class="flexColumn" aciton="FormAction.php">
 						<fieldset>
-							<legend>Seu nome</legend>
+							<legend>Nome</legend>
 							<div style="display: flex">
 								<input class="input" type="input"></input>
 							</div>
 						</fieldset>
 						<fieldset>
-							<legend>Um segredo</legend>
+							<legend>E-mail</legend>
+							<div style="display: flex">
+								<input class="input" type="e-mail"></input>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Senha</legend>
 							<div style="display: flex">
 								<input class="input" type="password"></input>
 							</div>
@@ -72,34 +78,10 @@
 							</div>
 						</fieldset>
 						<fieldset>
-							<legend>Descreva o que afetou sua escolha na pergunta acima</legend>
+							<legend>Cite um exemplo de como reduzir a utilização de plásticos não reutilizaveis</legend>
 							<div class="flexRow">
 								<textarea class="input" style="width: 100%; height: 75px"></textarea>
 							</div>
-						</fieldset>
-						<fieldset>
-							<legend>A raposa pertence a qual familia biológica?</legend>
-							<select style="margin: 10px 0px;">
-							  <option value="ailuridae">Ailuridae</option>
-							  <option value="amphicyonidae">Amphicyonidae</option>
-							  <option value="canidae">Canidae</option>
-							  <option value="phocidae">Phocidae</option>
-							</select>
-						</fieldset>
-						<fieldset>
-							<legend>Quais dos seguintes animais brasileiros estão em extinção?</legend>
-							<select multiple style="margin: 10px 0px;">
-							  <option value="ararajuba">Ararajuba</option>
-							  <option value="arara">Arara-azul</option>
-							  <option value="ariranha">Ariranha</option>
-							  <option value="baleia">Baleia-franca</option>
-							  <option value="gato">Gato-maracajá</option>
-							  <option value="cervo">Cervo-do-pantanal</option>
-							  <option value="macaco">Macaco-aranha</option>
-							  <option value="mico">Mico-leão-dourado</option>
-							  <option value="onca">Onça-pintada</option>
-							  <option value="tartaruga">Tartaruga-oliva</option>
-							</select>
 						</fieldset>
 						<input class="button small" style="margin-bottom: 10px;" type="reset">
 						<input class="button small" type="submit">
